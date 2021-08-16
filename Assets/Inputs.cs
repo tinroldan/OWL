@@ -6,7 +6,6 @@ public class Inputs : MonoBehaviour
 {
     private bool used;
 
-    private Rigidbody2D rb2d;
 
     void Start()
     {
@@ -23,11 +22,7 @@ public class Inputs : MonoBehaviour
 
         if (col.CompareTag("Player") && !used)
         {
-            rb2d = col.gameObject.GetComponent<Rigidbody2D>();
-
-            rb2d.AddForce(new Vector2(0, 5), ForceMode2D.Impulse);
-
-            used = true;
+            
 
         }
     }
