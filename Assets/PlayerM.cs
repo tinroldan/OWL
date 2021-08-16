@@ -90,12 +90,16 @@ public class PlayerM : MonoBehaviour
 
                 case 6://dash
                     break;
-                
+
                 case 7://size
                     break;
 
             }
         }
+    }
+
+    public void OnDamage()
+    {
     }
 
     private IEnumerator TimerSpeed()
@@ -105,7 +109,7 @@ public class PlayerM : MonoBehaviour
         speed = initialSpeed;
         print("return");
     }
-    
+
 
 
     public void GO()

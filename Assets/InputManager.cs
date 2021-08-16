@@ -6,43 +6,49 @@ using UnityEditor;
 public class InputManager : MonoBehaviour
 {
 
-    public Transform player;
-    [SerializeField] float maxDist;
+    Transform player;
+    [SerializeField] 
+    float maxDist;
+
+    [SerializeField]
+    int input;
+
+
+    [Header("Show distance")]
     public float dist;
-    // Start is called before the first frame update
+
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        
+    }
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         CheckDistance();
 
-        
     }
 
     public void CheckDistance()
     {
         dist = Vector2.Distance(player.position, transform.position);
-        //print("Distance to player: " + dist);
 
 
-        if (dist >= maxDist)
+        if (dist <= maxDist)
         {
-            Debug.Log("player still too far");
+            player.gameObject.GetComponent<PlayerM>().OnInput(input);
 
         }
-        else
-        {
-            Debug.Log("Player close");
-        }
-        print("Distance: " + dist);
+        
     }
 
     private void OnDrawGizmos()
     {
+        Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, maxDist/2);
     }
 }
