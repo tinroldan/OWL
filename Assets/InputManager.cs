@@ -7,11 +7,13 @@ public class InputManager : MonoBehaviour
 {
 
     Transform player;
-    [SerializeField] 
+    [SerializeField]
     float maxDist;
 
     [SerializeField]
     int input;
+
+    private bool actived;
 
 
     [Header("Show distance")]
@@ -20,16 +22,20 @@ public class InputManager : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        
+
     }
     void Start()
     {
-        
+        actived = false;
     }
 
     void Update()
     {
-        CheckDistance();
+        if (!actived)
+        {
+            CheckDistance();
+
+        }
 
     }
 
@@ -41,14 +47,15 @@ public class InputManager : MonoBehaviour
         if (dist <= maxDist)
         {
             player.gameObject.GetComponent<PlayerM>().OnInput(input);
+            actived = true;
 
         }
-        
+
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, maxDist/2);
+        Gizmos.DrawWireSphere(transform.position, maxDist / 2);
     }
 }
