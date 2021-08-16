@@ -6,15 +6,21 @@ public class PlayerM : MonoBehaviour
 {
     [Header("Player Value")]
     [SerializeField]
-    float speed;
+    float speed, jumpForce;
+
+    float initialSpeed;
 
     private bool go;
+
+    private Rigidbody2D rb2d;
+
 
     Vector2 initialPos;
     void Start()
     {
         go = false;
         initialPos = transform.position;
+        initialSpeed = speed;
     }
 
     // Update is called once per frame
@@ -24,6 +30,7 @@ public class PlayerM : MonoBehaviour
         {
             transform.position += new Vector3(1, 0, 0) * (Time.deltaTime * speed);
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -40,30 +47,63 @@ public class PlayerM : MonoBehaviour
         }
     }
 
+    [Header("Input Value")]
+    public int input;
     public void OnInput(int input)
     {
-        switch (input)
+        if (input >= 0 && input <= 6)
         {
-            case 0:
-                break;
+            print("Input: " + input);
 
-            case 1:
-                break;
+            switch (input)
+            {
+                case 0://jump
 
-            case 2:
-                break;
+                    rb2d = GetComponent<Rigidbody2D>();
 
-            case 3:
-                break;
+                    rb2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
 
-            case 4:
-                break;
+                    break;
 
-            case 5:
-                break;
+                case 1://slow
 
+                    speed = speed / 2;
+                    StartCoroutine(TimerSpeed());
 
+                    break;
+
+                case 2://speed
+
+                    speed = speed * 2;
+                    StartCoroutine(TimerSpeed());
+
+                    break;
+
+                case 3://left
+                    break;
+
+                case 4://right
+                    break;
+
+                case 5://gravity
+                    break;
+
+                case 6://dash
+                    break;
+                
+                case 7://size
+                    break;
+
+            }
         }
+    }
+
+    private IEnumerator TimerSpeed()
+    {
+        yield return new WaitForSeconds(2f);
+
+        speed = initialSpeed;
+        print("return");
     }
     
 
