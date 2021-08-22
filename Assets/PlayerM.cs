@@ -15,7 +15,7 @@ public class PlayerM : MonoBehaviour
     private Rigidbody2D rb2d;
 
 
-    Vector2 initialPos;
+    Vector3 initialPos;
     void Start()
     {
         go = false;
