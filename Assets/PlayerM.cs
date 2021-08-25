@@ -68,14 +68,14 @@ public class PlayerM : MonoBehaviour
                 case 1://slow
 
                     speed = speed / 2;
-                    StartCoroutine(TimerSpeed());
+                    StartCoroutine(TimerSpeed(2.5f));
 
                     break;
 
                 case 2://speed
 
                     speed = speed * 2;
-                    StartCoroutine(TimerSpeed());
+                    StartCoroutine(TimerSpeed(1.5f));
 
                     break;
 
@@ -102,12 +102,12 @@ public class PlayerM : MonoBehaviour
     {
     }
 
-    private IEnumerator TimerSpeed()
+    private IEnumerator TimerSpeed(float returnSpeed)
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(returnSpeed);
 
         speed = initialSpeed;
-        print("return");
+        //print("return");
     }
 
 
