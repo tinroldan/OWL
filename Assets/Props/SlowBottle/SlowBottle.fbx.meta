@@ -3,7 +3,32 @@ guid: 4ecb1dc68f794894ca534db3a03946a0
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bottle_Glass
+    second: {fileID: 2100000, guid: 007aca5e1723ff94fbd0beb21e4a32e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cork
+    second: {fileID: 2100000, guid: b9ece5bc0377d2049a659d2988c08141, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Outline
+    second: {fileID: 2100000, guid: 22e6fe9493f0bb04d8de5e189b4f1d45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: snail
+    second: {fileID: 2100000, guid: 9f01b8bafba18a94ebeabff66f56c24c, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: cork2
+    second: {fileID: 2800000, guid: 698acc93834c255499a56dbea132a63c, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

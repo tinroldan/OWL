@@ -29,6 +29,9 @@ public class MoveInputs : MonoBehaviour
     //    }
     //}
 
+    [SerializeField]
+    Vector3 pointTouch;
+    [SerializeField]
     GameObject gObject = null;
     Plane planeObj;
     Vector3 nO;
@@ -72,10 +75,22 @@ public class MoveInputs : MonoBehaviour
         {
             Ray mRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             float rayDistance;
+
             if(planeObj.Raycast(mRay,out rayDistance))
             {
-                gObject.transform.position = mRay.GetPoint(rayDistance) + nO;
+                pointTouch = mRay.GetPoint(rayDistance) + nO;
+                if(pointTouch.y<=-2)
+                {
+                    gObject.transform.position = new Vector3(pointTouch.x, -2.5f, pointTouch.z);
+                }
+                else
+                {
+                    gObject.transform.position = new Vector3(pointTouch.x, pointTouch.y, pointTouch.z);
+
+                }
+
             }
+
         }
         else if(Input.GetMouseButtonUp(0)&&gObject)
         {

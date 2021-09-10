@@ -17,7 +17,7 @@ public class UIManager : MonoBehaviour
 
     public void CloseMenu()
     {
-        mainMenu.DOAnchorPos(new Vector2(-650, 0), 0.3f);
+        mainMenu.DOAnchorPos(new Vector2(0, -303), 0.3f);
         StartCoroutine(OnButton());
     }
 

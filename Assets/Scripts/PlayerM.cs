@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerM : MonoBehaviour
 {
@@ -14,10 +15,14 @@ public class PlayerM : MonoBehaviour
 
     private Rigidbody2D rb2d;
 
+    [SerializeField]
+    Animator anim;
+
 
     Vector3 initialPos;
     void Start()
     {
+        anim.SetBool("Walk", false);
         go = false;
         initialPos = transform.position;
         initialSpeed = speed;
@@ -38,12 +43,18 @@ public class PlayerM : MonoBehaviour
         if (col.CompareTag("cheese"))
         {
             go = false;
+            anim.SetBool("Walk", false);
+            SceneManager.LoadScene("Main");
         }
 
         if (col.CompareTag("fire"))
         {
             transform.position = initialPos;
             go = false;
+            anim.SetBool("Walk", false);
+            SceneManager.LoadScene("Main");
+
+
         }
     }
 
@@ -115,5 +126,7 @@ public class PlayerM : MonoBehaviour
     public void GO()
     {
         go = true;
+        anim.SetBool("Walk", true);
+
     }
 }
