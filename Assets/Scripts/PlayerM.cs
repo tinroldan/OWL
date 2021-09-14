@@ -6,10 +6,9 @@ using UnityEngine.SceneManagement;
 public class PlayerM : MonoBehaviour
 {
     [Header("Player Value")]
-    [SerializeField]
-    float speed, jumpForce;
+    public float speed, jumpForce;
 
-    float initialSpeed;
+    public float initialSpeed;
 
     private bool go;
 
@@ -17,6 +16,9 @@ public class PlayerM : MonoBehaviour
 
     [SerializeField]
     Animator anim;
+
+    [SerializeField]
+    GameObject menuF, menuW;
 
 
     Vector3 initialPos;
@@ -38,21 +40,42 @@ public class PlayerM : MonoBehaviour
 
     }
 
+    //public void Restart()//esto es mero machetazo xD
+    //{
+    //    transform.position = initialPos;
+
+    //    go = false;
+    //    anim.SetBool("Walk", false);
+    //    SceneManager.LoadScene("Main");
+    //    Time.timeScale = 1;
+
+    //}
+
+    public void Perder()//esto es otro machetazzo xD
+    {
+        menuF.SetActive(true);
+        Time.timeScale = 0;
+    }
+    public void Ganar()//esto es otro machetazzo xD
+    {
+        menuW.SetActive(true);
+        Time.timeScale = 0;
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("cheese"))
         {
-            go = false;
-            anim.SetBool("Walk", false);
-            SceneManager.LoadScene("Main");
+
+            Ganar();
         }
 
         if (col.CompareTag("fire"))
         {
-            transform.position = initialPos;
-            go = false;
-            anim.SetBool("Walk", false);
-            SceneManager.LoadScene("Main");
+            Perder();
+            //go = false;
+            //anim.SetBool("Walk", false);
+            //SceneManager.LoadScene("Main");
 
 
         }

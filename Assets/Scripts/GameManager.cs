@@ -5,45 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    [SerializeField]
-    Animator anim;
-    [SerializeField]
-    GameObject objectMenu;
-    [SerializeField]
-    GameObject buttonIn, buttonOut;
-
-
-    private void Start()
+    public void ActiveInput(GameObject input)
     {
-        objectMenu.SetActive(false);
-        buttonIn.SetActive(true);
-        buttonOut.SetActive(false);
-
-    }
-    public void ShowMenu()
-    {
-        anim.SetBool("showMenu", true);
-        objectMenu.SetActive(true);
-
-        buttonIn.SetActive(false);
-
-        buttonOut.SetActive(true);
-    }
-
-    public void HidenMenu()
-    {
-
-
-        anim.SetBool("showMenu", false);
-        buttonIn.SetActive(true);
-
-        buttonOut.SetActive(false);
-
-    }
-
-    public void OffMenu()
-    {
-        objectMenu.SetActive(false);
-
+        input.SetActive(true);
     }
 }
