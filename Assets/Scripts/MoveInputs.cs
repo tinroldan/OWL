@@ -54,14 +54,17 @@ public class MoveInputs : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             Ray mouseRay = GenerateMousRay();
             RaycastHit hit;
 
-            if(Physics.Raycast(mouseRay.origin,mouseRay.direction,out hit))
+            if (Physics.Raycast(mouseRay.origin, mouseRay.direction, out hit))
             {
+
                 gObject = hit.transform.gameObject;
+
+
                 planeObj = new Plane(Camera.main.transform.forward * -1, gObject.transform.position);
 
                 //calculate mouse offset
@@ -71,28 +74,34 @@ public class MoveInputs : MonoBehaviour
                 nO = gObject.transform.position - mRay.GetPoint(rayDistance);
             }
         }
-        else if(Input.GetMouseButton(0)&&gObject)
+        else if (Input.GetMouseButton(0) && gObject)
         {
             Ray mRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             float rayDistance;
 
-            if(planeObj.Raycast(mRay,out rayDistance))
+            if (gObject.gameObject.CompareTag("Input"))
             {
-                pointTouch = mRay.GetPoint(rayDistance) + nO;
-                if(pointTouch.y<=-2)
+
+
+
+                if (planeObj.Raycast(mRay, out rayDistance))
                 {
-                    gObject.transform.position = new Vector3(pointTouch.x, -2.5f, pointTouch.z);
-                }
-                else
-                {
-                    gObject.transform.position = new Vector3(pointTouch.x, pointTouch.y, pointTouch.z);
+                    pointTouch = mRay.GetPoint(rayDistance) + nO;
+                    if (pointTouch.y <= 1.3)
+                    {
+                        gObject.transform.position = new Vector3(pointTouch.x, 0.6f, pointTouch.z);
+                    }
+                    else
+                    {
+                        gObject.transform.position = new Vector3(pointTouch.x, pointTouch.y, pointTouch.z);
+
+                    }
 
                 }
-
             }
 
         }
-        else if(Input.GetMouseButtonUp(0)&&gObject)
+        else if (Input.GetMouseButtonUp(0) && gObject)
         {
             gObject = null;
         }
