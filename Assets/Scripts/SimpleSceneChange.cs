@@ -11,4 +11,9 @@ public class SimpleSceneChange : MonoBehaviour
         Time.timeScale = 1;
 
     }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+    }
 }
