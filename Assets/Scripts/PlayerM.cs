@@ -95,7 +95,16 @@ public class PlayerM : MonoBehaviour
 
                     rb2d = GetComponent<Rigidbody2D>();
 
-                    rb2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+                    if(speed<=2)
+                    {
+                        rb2d.AddForce(new Vector2(0, jumpForce*2), ForceMode2D.Impulse);
+
+                    }
+                    else
+                    {
+                        rb2d.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+
+                    }
 
                     break;
 
