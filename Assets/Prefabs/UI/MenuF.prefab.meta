@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/UI/MenuF.prefab.meta
 guid: f050da4b92edc4145bde37cc74d96b01
 PrefabImporter:
+=======
+guid: b7e59e9d4136fde49907e36dc7ca1c9c
+folderAsset: yes
+DefaultImporter:
+>>>>>>> parent of 15e1aae (help):Assets/Scripts/AudioScripts.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
