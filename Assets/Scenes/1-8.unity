@@ -5061,6 +5061,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 680356658}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: GoButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &246975648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15661,6 +15673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BackgroundM: {fileID: 1946943514}
+  ButtonGo: {fileID: 8300000, guid: 2a097c3121eaa404b8d28529166ed153, type: 3}
 --- !u!4 &680356659
 Transform:
   m_ObjectHideFlags: 0
