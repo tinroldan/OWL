@@ -6,7 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] AudioSource BackgroundM;
     AudioSource ButtonSource;
-    [SerializeField] AudioClip ButtonGo;
+    [SerializeField] AudioClip ButtonGo,InputSelect,GenericButton1,GenricButton2;
     void Start()
     {
         BackgroundM.Play();
@@ -16,5 +16,16 @@ public class AudioManager : MonoBehaviour
     {
         ButtonSource.PlayOneShot(ButtonGo);
     }
-
+    public void genericButton1()
+    {
+        ButtonSource.PlayOneShot(GenericButton1);
+    }
+    public void genericButton2()
+    {
+        ButtonSource.PlayOneShot(GenricButton2);
+    }
+    public void inputselectsound()
+    {
+        ButtonSource.PlayOneShot(InputSelect);
+    }
 }
