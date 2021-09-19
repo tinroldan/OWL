@@ -10,6 +10,10 @@ public class InputManager : MonoBehaviour
     [SerializeField]
     float maxDist;
 
+    AudioSource clipSource;
+    [SerializeField]
+    AudioClip InputClip;
+
     [SerializeField]
     int input;
 
@@ -22,6 +26,7 @@ public class InputManager : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        clipSource = GameObject.FindGameObjectWithTag("cliprec").GetComponent<AudioSource>();
 
     }
     void Start()
@@ -48,7 +53,7 @@ public class InputManager : MonoBehaviour
         {
             player.gameObject.GetComponent<PlayerM>().OnInput(input);
             actived = true;
-
+            clipSource.PlayOneShot(InputClip);
         }
 
     }
