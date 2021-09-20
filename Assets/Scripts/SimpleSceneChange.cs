@@ -16,4 +16,11 @@ public class SimpleSceneChange : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void ResetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
+
+    }
 }

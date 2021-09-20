@@ -8,6 +8,7 @@ TagManager:
   - cheese
   - Input
   - cliprec
+  - Manager
   layers:
   - Default
   - TransparentFX

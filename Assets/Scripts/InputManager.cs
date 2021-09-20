@@ -22,19 +22,31 @@ public class InputManager : MonoBehaviour
 
     private bool actived;
 
+    public MoveInputs moveMe;
 
     [Header("Show distance")]
     public float dist;
+
+    [SerializeField]//machetazo xD eliminar despues plis
+    GameObject parent;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         clipSource = GameObject.FindGameObjectWithTag("cliprec").GetComponent<AudioSource>();
+        moveMe = GameObject.FindGameObjectWithTag("Manager").GetComponent<MoveInputs>();
 
     }
     void Start()
     {
         actived = false;
+
+        if (moveMe!=null)
+        {
+            moveMe.gObject = parent.gameObject;
+            //parent.transform.position = new Vector3( moveMe.touchPos.x, moveMe.touchPos.y,0);
+
+        }
     }
 
     void Update()

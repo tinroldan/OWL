@@ -29,12 +29,15 @@ public class MoveInputs : MonoBehaviour
     //    }
     //}
 
-    [SerializeField]
-    Vector3 pointTouch;
-    [SerializeField]
-    GameObject gObject = null;
+    public Vector3 pointTouch;
+    public GameObject gObject = null;
     Plane planeObj;
     Vector3 nO;
+
+    [SerializeField]
+    float closePos, snapPos;
+
+    public GameObject inputInstance;
 
     Ray GenerateMousRay()
     {
@@ -52,7 +55,7 @@ public class MoveInputs : MonoBehaviour
         return mr;
     }
 
-    private void Update()
+    void UpdateTouch()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -62,7 +65,13 @@ public class MoveInputs : MonoBehaviour
             if (Physics.Raycast(mouseRay.origin, mouseRay.direction, out hit))
             {
 
+
+
                 gObject = hit.transform.gameObject;
+
+
+
+
 
 
                 planeObj = new Plane(Camera.main.transform.forward * -1, gObject.transform.position);
@@ -74,37 +83,56 @@ public class MoveInputs : MonoBehaviour
                 nO = gObject.transform.position - mRay.GetPoint(rayDistance);
             }
         }
-        else if (Input.GetMouseButton(0) && gObject)
+        else if (Input.GetMouseButton(0) && (gObject))
         {
             Ray mRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             float rayDistance;
 
-            if (gObject.gameObject.CompareTag("Input"))
+
+            if (gObject.gameObject.tag != "Input")
             {
+                return;
+            }
 
 
-
-                if (planeObj.Raycast(mRay, out rayDistance))
+            if (planeObj.Raycast(mRay, out rayDistance))
+            {
+                pointTouch = mRay.GetPoint(rayDistance) + nO;
+                if (pointTouch.y <= closePos)
                 {
-                    pointTouch = mRay.GetPoint(rayDistance) + nO;
-                    if (pointTouch.y <= 1.3)
-                    {
-                        gObject.transform.position = new Vector3(pointTouch.x, 0.6f, pointTouch.z);
-                    }
-                    else
-                    {
-                        gObject.transform.position = new Vector3(pointTouch.x, pointTouch.y, pointTouch.z);
-
-                    }
+                    gObject.transform.position = new Vector3(pointTouch.x, snapPos, gObject.transform.position.z);
+                }
+                else
+                {
+                    gObject.transform.position = new Vector3(pointTouch.x, pointTouch.y, gObject.transform.position.z);
 
                 }
+
             }
+
+
+
 
         }
         else if (Input.GetMouseButtonUp(0) && gObject)
         {
             gObject = null;
         }
+    }
+
+    public Vector3 touchPos;
+    void Update()
+    {
+        //touchPos = Input.mousePosition;
+        //touchPos = Camera.main.ScreenToWorldPoint(touchPos);
+
+        //if (inputInstance != null)
+        //{
+        //    Instantiate(inputInstance);
+        //    inputInstance = null;
+        //}
+        UpdateTouch();
+
     }
 
 
