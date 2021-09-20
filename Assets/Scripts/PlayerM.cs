@@ -20,6 +20,9 @@ public class PlayerM : MonoBehaviour
     [SerializeField]
     GameObject menuF, menuW;
 
+    [Header("Player VFX")]
+    [SerializeField] ParticleSystem speedPS;
+    [SerializeField] ParticleSystem SlowPS;
 
     Vector3 initialPos;
     void Start()
@@ -111,6 +114,7 @@ public class PlayerM : MonoBehaviour
                 case 1://slow
 
                     speed = speed / 2;
+                    SlowPS.Play();
                     StartCoroutine(TimerSpeed(2.5f));
 
                     break;
@@ -118,6 +122,7 @@ public class PlayerM : MonoBehaviour
                 case 2://speed
 
                     speed = speed * 2;
+                    speedPS.Play();
                     StartCoroutine(TimerSpeed(1.5f));
 
                     break;
