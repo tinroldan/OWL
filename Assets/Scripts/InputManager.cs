@@ -17,6 +17,9 @@ public class InputManager : MonoBehaviour
     [SerializeField]
     int input;
 
+    [SerializeField]
+    ParticleSystem Effect;
+
     private bool actived;
 
 
@@ -54,6 +57,7 @@ public class InputManager : MonoBehaviour
             player.gameObject.GetComponent<PlayerM>().OnInput(input);
             actived = true;
             clipSource.PlayOneShot(InputClip);
+            Effect.Play();
         }
 
     }

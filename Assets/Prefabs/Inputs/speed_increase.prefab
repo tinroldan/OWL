@@ -5194,6 +5194,7 @@ MonoBehaviour:
   maxDist: 0.3
   InputClip: {fileID: 8300000, guid: 44fc69fb93eff8041b92abd1612f2106, type: 3}
   input: 2
+  Effect: {fileID: 1422934304071358921, guid: 2dee3ab6a4c2b034496499d8949da4d1, type: 3}
   dist: 0
 --- !u!1 &4540831498674886073
 GameObject:
