@@ -19358,6 +19358,11 @@ PrefabInstance:
     - target: {fileID: 2230529512845729013, guid: 8825e593944d1434598c5754406b6bd3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2230529512845729013, guid: 8825e593944d1434598c5754406b6bd3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2230529512845729013, guid: 8825e593944d1434598c5754406b6bd3,
@@ -19367,8 +19372,34 @@ PrefabInstance:
       objectReference: {fileID: 689747531}
     - target: {fileID: 2230529512845729013, guid: 8825e593944d1434598c5754406b6bd3,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 26695a3de33b0c44b8ec50e59afaba6a,
+        type: 2}
+    - target: {fileID: 2230529512845729013, guid: 8825e593944d1434598c5754406b6bd3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2230529512845729013, guid: 8825e593944d1434598c5754406b6bd3,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GOButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2230529512845729013, guid: 8825e593944d1434598c5754406b6bd3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: HideTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 2230529512845729013, guid: 8825e593944d1434598c5754406b6bd3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TutorialController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2230529512845729013, guid: 8825e593944d1434598c5754406b6bd3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2230529512993178444, guid: 8825e593944d1434598c5754406b6bd3,
         type: 3}
@@ -28094,11 +28125,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3342cafee5e06f44c92893c7a1d803e3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 86e0bd6fe0ef9fb438a7512399d49b79, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.708
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -34999,6 +35030,7 @@ GameObject:
   - component: {fileID: 1318245806}
   - component: {fileID: 1318245809}
   - component: {fileID: 1318245808}
+  - component: {fileID: 1318245810}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -35097,6 +35129,21 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &1318245810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318245804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277c65695c3ea3a48bc27d13c782ac79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ObjectToHide: {fileID: 1318245804}
+  _TutorialController: {fileID: 11400000, guid: 26695a3de33b0c44b8ec50e59afaba6a,
+    type: 2}
 --- !u!1001 &1325803863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45813,6 +45860,7 @@ GameObject:
   - component: {fileID: 1616030977}
   - component: {fileID: 1616030979}
   - component: {fileID: 1616030978}
+  - component: {fileID: 1616030980}
   m_Layer: 5
   m_Name: Instructions
   m_TagString: Untagged
@@ -45937,6 +45985,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616030976}
   m_CullTransparentMesh: 1
+--- !u!114 &1616030980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616030976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277c65695c3ea3a48bc27d13c782ac79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ObjectToHide: {fileID: 1616030976}
+  _TutorialController: {fileID: 11400000, guid: 26695a3de33b0c44b8ec50e59afaba6a,
+    type: 2}
 --- !u!1 &1616527534
 GameObject:
   m_ObjectHideFlags: 0
