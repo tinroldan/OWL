@@ -40231,7 +40231,7 @@ GameObject:
   - component: {fileID: 1314237030}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40253,6 +40253,10 @@ MonoBehaviour:
   InputSelect: {fileID: 8300000, guid: 1b720a4cca3c50f48bd32e5308e1981e, type: 3}
   GenericButton1: {fileID: 8300000, guid: 65c34b73e8dac6c409dda005c2b284a2, type: 3}
   GenricButton2: {fileID: 8300000, guid: c4e99e9417603e144bbaa3ab81902352, type: 3}
+  World1: {fileID: 8300000, guid: 86e0bd6fe0ef9fb438a7512399d49b79, type: 3}
+  World2: {fileID: 8300000, guid: 7b6bf33d1d9b50d459d91f52b9b93ab7, type: 3}
+  World3: {fileID: 8300000, guid: 98bc866345f86de4190ec7a510cf0e75, type: 3}
+  World4: {fileID: 8300000, guid: 3ad09aba1e2b0774b804c172f078eb04, type: 3}
 --- !u!4 &1314237031
 Transform:
   m_ObjectHideFlags: 0

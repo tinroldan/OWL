@@ -13913,11 +13913,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 86e0bd6fe0ef9fb438a7512399d49b79, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 0.708
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -42811,7 +42811,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -49503,6 +49503,10 @@ MonoBehaviour:
   InputSelect: {fileID: 8300000, guid: 1b720a4cca3c50f48bd32e5308e1981e, type: 3}
   GenericButton1: {fileID: 8300000, guid: 65c34b73e8dac6c409dda005c2b284a2, type: 3}
   GenricButton2: {fileID: 8300000, guid: c4e99e9417603e144bbaa3ab81902352, type: 3}
+  World1: {fileID: 0}
+  World2: {fileID: 0}
+  World3: {fileID: 0}
+  World4: {fileID: 0}
 --- !u!4 &2090433237
 Transform:
   m_ObjectHideFlags: 0
