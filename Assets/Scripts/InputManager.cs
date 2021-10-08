@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class InputManager : MonoBehaviour
     [SerializeField]//machetazo xD eliminar despues plis
     GameObject parent;
 
+    public UnityEvent eventInput;
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -41,7 +44,7 @@ public class InputManager : MonoBehaviour
     {
         actived = false;
 
-        if (moveMe!=null)
+        if (moveMe != null)
         {
             moveMe.gObject = parent.gameObject;
             //parent.transform.position = new Vector3( moveMe.touchPos.x, moveMe.touchPos.y,0);
@@ -63,16 +66,23 @@ public class InputManager : MonoBehaviour
     {
         dist = Vector2.Distance(player.position, transform.position);
 
-
-        if (dist <= maxDist)
+        if (dist <= maxDist && player.gameObject.GetComponent<PlayerM>().go)
         {
             player.gameObject.GetComponent<PlayerM>().OnInput(input);
+            eventInput?.Invoke();
             actived = true;
             clipSource.PlayOneShot(InputClip);
             Effect.Play();
         }
 
     }
+
+    public void ActiveAnim(Animator anim)
+    {
+        anim.SetBool("Active", true);
+    }
+
+
 
     private void OnDrawGizmos()
     {

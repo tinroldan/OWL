@@ -95,18 +95,35 @@ public class MoveInputs : MonoBehaviour
             }
 
 
+
             if (planeObj.Raycast(mRay, out rayDistance))
             {
                 pointTouch = mRay.GetPoint(rayDistance) + nO;
-                if (pointTouch.y <= closePos)
+
+                if (gObject.GetComponent<FindSnap>() != null && gObject.GetComponent<FindSnap>().snap != null)
                 {
-                    gObject.transform.position = new Vector3(pointTouch.x, snapPos, gObject.transform.position.z);
+                    snapPos = gObject.GetComponent<FindSnap>().snap.transform.position.y;
+                    closePos = snapPos + 0.5f;
+                    //snap machete
+                    if (pointTouch.y <= closePos)
+                    {
+                        gObject.transform.position = new Vector3(pointTouch.x, snapPos, gObject.transform.position.z);
+                    }
+                    else
+                    {
+                        gObject.transform.position = new Vector3(pointTouch.x, pointTouch.y, gObject.transform.position.z);
+
+                    }
+
                 }
                 else
                 {
                     gObject.transform.position = new Vector3(pointTouch.x, pointTouch.y, gObject.transform.position.z);
 
                 }
+
+
+                //snap menos machete
 
             }
 

@@ -9,6 +9,7 @@ TagManager:
   - Input
   - cliprec
   - Manager
+  - Snap
   layers:
   - Default
   - TransparentFX

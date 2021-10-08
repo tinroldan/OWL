@@ -10,7 +10,7 @@ public class PlayerM : MonoBehaviour
 
     public float initialSpeed;
 
-    private bool go;
+    public bool go;
 
     private Rigidbody2D rb2d;
 

@@ -16,6 +16,6 @@ public class ThingToHide : MonoBehaviour
     }
     private void hiding()
     {
-        _ObjectToHide.active = false;
+        _ObjectToHide.SetActive(false);
     }
 }
