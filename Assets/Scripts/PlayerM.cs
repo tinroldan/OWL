@@ -23,6 +23,7 @@ public class PlayerM : MonoBehaviour
     [Header("Player VFX")]
     [SerializeField] ParticleSystem speedPS;
     [SerializeField] ParticleSystem SlowPS;
+    [SerializeField] ParticleSystem SizeUpPS;
 
     Vector3 initialPos;
     Vector3 initialScale;
@@ -170,6 +171,7 @@ public class PlayerM : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         gameObject.transform.localScale = initialScale;
+        SizeUpPS.Play();
         print("return scale");
     }
 
