@@ -9,34 +9,16 @@ public class AudioManager : MonoBehaviour
     AudioSource ButtonSource;
     Scene scene;
     private bool AlreadyExist = false;
-    [SerializeField] AudioClip ButtonGo, InputSelect, GenericButton1, GenricButton2, World1, World2, World3, World4;
+    [SerializeField] AudioClip World1, World2, World3, World4, Menu;
     void Start()
     {
-        BackgroundM.Play();
-        ButtonSource = GameObject.FindGameObjectWithTag("cliprec").GetComponent<AudioSource>();
-        
         if (GameObject.FindGameObjectsWithTag("Manager").Length < 2 && AlreadyExist == false)
         {
             DontDestroyOnLoad(gameObject);
             AlreadyExist = true;
         }
     }
-    public void GoButton()
-    {
-        ButtonSource.PlayOneShot(ButtonGo);
-    }
-    public void genericButton1()
-    {
-        ButtonSource.PlayOneShot(GenericButton1);
-    }
-    public void genericButton2()
-    {
-        ButtonSource.PlayOneShot(GenricButton2);
-    }
-    public void inputselectsound()
-    {
-        ButtonSource.PlayOneShot(InputSelect);
-    }
+   
     private void Update()
     {
         scene = SceneManager.GetActiveScene();
@@ -65,6 +47,13 @@ public class AudioManager : MonoBehaviour
                 break;
             case "4-1":
                 BackgroundM.clip = World4;
+                if (BackgroundM.isPlaying == false)
+                {
+                    BackgroundM.Play();
+                }
+                break;
+            case "TitleScreen":
+                  BackgroundM.clip = Menu;
                 if (BackgroundM.isPlaying == false)
                 {
                     BackgroundM.Play();
