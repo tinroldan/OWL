@@ -25,12 +25,16 @@ public class PlayerM : MonoBehaviour
     [SerializeField] ParticleSystem SlowPS;
 
     Vector3 initialPos;
+    Vector3 initialScale;
     void Start()
     {
+
         anim.SetBool("Walk", false);
         go = false;
         initialPos = transform.position;
         initialSpeed = speed;
+        initialScale = this.gameObject.transform.localScale;
+
     }
 
     // Update is called once per frame
@@ -88,7 +92,7 @@ public class PlayerM : MonoBehaviour
     public int input;
     public void OnInput(int input)
     {
-        if (input >= 0 && input <= 6)
+        if (input >= 0 && input <= 7)
         {
             print("Input: " + input);
 
@@ -140,6 +144,9 @@ public class PlayerM : MonoBehaviour
                     break;
 
                 case 7://size
+
+                    gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x / 2, gameObject.transform.localScale.y / 2,gameObject.transform.localScale.z / 2);
+                    StartCoroutine(TimerSize());
                     break;
 
             }
@@ -156,6 +163,14 @@ public class PlayerM : MonoBehaviour
 
         speed = initialSpeed;
         //print("return");
+    }
+
+    private IEnumerator TimerSize()
+    {
+        yield return new WaitForSeconds(2f);
+
+        gameObject.transform.localScale = initialScale;
+        print("return scale");
     }
 
 
