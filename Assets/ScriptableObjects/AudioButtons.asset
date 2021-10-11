@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: AudioButtons
   m_EditorClassIdentifier: 
   ButtonGo: {fileID: 8300000, guid: 2a097c3121eaa404b8d28529166ed153, type: 3}
-  GenericButton1: {fileID: 8300000, guid: 65c34b73e8dac6c409dda005c2b284a2, type: 3}
+  GenericButton: {fileID: 8300000, guid: 65c34b73e8dac6c409dda005c2b284a2, type: 3}
   GenericButton2: {fileID: 8300000, guid: c4e99e9417603e144bbaa3ab81902352, type: 3}
   InputSelect: {fileID: 8300000, guid: 909457c15cee1d043bf9f9555ca4dd10, type: 3}

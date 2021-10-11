@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ButtonsAudios : ScriptableObject
 {
-    [SerializeField] AudioClip ButtonGo, GenericButton1, GenericButton2, InputSelect;
+    [SerializeField] AudioClip ButtonGo, GenericButton, GenericButton2, InputSelect;
     AudioSource ButtonSource;
    private void Awake()
     {
@@ -18,7 +18,7 @@ public class ButtonsAudios : ScriptableObject
     }
     public void genericButton1()
     {
-        ButtonSource.PlayOneShot(GenericButton1);
+        ButtonSource.PlayOneShot(GenericButton);
     }
     public void genericButton2()
     {
