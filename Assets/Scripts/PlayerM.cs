@@ -133,6 +133,10 @@ public class PlayerM : MonoBehaviour
                     break;
 
                 case 3://left
+                    speed = speed * -1;
+                    initialSpeed = speed;
+                    this.gameObject.transform.localScale = new Vector3(this.gameObject.transform.localScale.x * -1, this.gameObject.transform.localScale.y, this.gameObject.transform.localScale.z);
+
                     break;
 
                 case 4://right
