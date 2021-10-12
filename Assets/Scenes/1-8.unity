@@ -34820,6 +34820,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dust
       objectReference: {fileID: 0}
+    - target: {fileID: 7304339121754763634, guid: 664aa3c5b41ac9249802c24a7cf2ab4d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7304339121754763645, guid: 664aa3c5b41ac9249802c24a7cf2ab4d,
         type: 3}
       propertyPath: m_RootOrder
@@ -47252,7 +47257,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 40
   field of view: 77.73571
   orthographic: 0
   orthographic size: 5

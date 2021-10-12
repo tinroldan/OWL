@@ -40026,6 +40026,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fireflies
       objectReference: {fileID: 0}
+    - target: {fileID: 3583546364534562991, guid: d3cf49dc55088e246a7649430cad1769,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3cf49dc55088e246a7649430cad1769, type: 3}
 --- !u!1001 &1396793532
@@ -45356,6 +45361,7 @@ Transform:
   - {fileID: 120910825}
   - {fileID: 60833629}
   - {fileID: 1833257306}
+  - {fileID: 724715989}
   - {fileID: 1338344574}
   - {fileID: 1962836445}
   - {fileID: 1477153869}
@@ -45386,7 +45392,6 @@ Transform:
   - {fileID: 1458736294}
   - {fileID: 1663486908}
   - {fileID: 758877318}
-  - {fileID: 1076705097}
   - {fileID: 2049510054}
   - {fileID: 1070700101}
   - {fileID: 863092828}
@@ -45410,6 +45415,7 @@ Transform:
   - {fileID: 431518745}
   - {fileID: 1828180575}
   - {fileID: 2137029609}
+  - {fileID: 1658021117}
   - {fileID: 1118187707}
   - {fileID: 1850912524}
   - {fileID: 394838561}
@@ -45418,7 +45424,7 @@ Transform:
   - {fileID: 1347493276}
   - {fileID: 1620457330}
   - {fileID: 1576125554}
-  - {fileID: 724715989}
+  - {fileID: 1076705097}
   - {fileID: 1337372325}
   - {fileID: 1401928434}
   - {fileID: 175152581}
@@ -45444,7 +45450,6 @@ Transform:
   - {fileID: 926524365}
   - {fileID: 763800341}
   - {fileID: 2021855157}
-  - {fileID: 1658021117}
   m_Father: {fileID: 1806733717}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -57448,7 +57453,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 40
   field of view: 77
   orthographic: 0
   orthographic size: 5

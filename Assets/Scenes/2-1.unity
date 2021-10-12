@@ -47408,6 +47408,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fireflies
       objectReference: {fileID: 0}
+    - target: {fileID: 3583546364534562991, guid: d3cf49dc55088e246a7649430cad1769,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3cf49dc55088e246a7649430cad1769, type: 3}
 --- !u!1001 &2000207549
@@ -48174,7 +48179,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 40
   field of view: 77
   orthographic: 0
   orthographic size: 5
