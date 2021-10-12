@@ -72,7 +72,11 @@ public class InputManager : MonoBehaviour
             eventInput?.Invoke();
             actived = true;
             clipSource.PlayOneShot(InputClip);
-            Effect.Play();
+            if (Effect != null)
+            {
+                Effect.Play();
+            }
+            
         }
 
     }

@@ -24,6 +24,8 @@ public class PlayerM : MonoBehaviour
     [SerializeField] ParticleSystem speedPS;
     [SerializeField] ParticleSystem SlowPS;
     [SerializeField] ParticleSystem SizeUpPS;
+    [SerializeField] ParticleSystem DirRightPS;
+    [SerializeField] ParticleSystem DirLeftPS;
 
     Vector3 initialPos;
     Vector3 initialScale;
@@ -119,7 +121,10 @@ public class PlayerM : MonoBehaviour
                 case 1://slow
 
                     speed = speed / 2;
-                    SlowPS.Play();
+                    if (SlowPS != null)
+                    {
+                        SlowPS.Play();
+                    }                    
                     StartCoroutine(TimerSpeed(2.5f));
 
                     break;
@@ -127,7 +132,10 @@ public class PlayerM : MonoBehaviour
                 case 2://speed
 
                     speed = speed * 2;
-                    speedPS.Play();
+                    if (speedPS != null)
+                    {
+                        speedPS.Play();
+                    }                   
                     StartCoroutine(TimerSpeed(1.5f));
 
                     break;
@@ -135,8 +143,16 @@ public class PlayerM : MonoBehaviour
                 case 3://left
                     speed = speed * -1;
                     initialSpeed = speed;
-                    this.gameObject.transform.localScale = new Vector3(this.gameObject.transform.localScale.x * -1, this.gameObject.transform.localScale.y, this.gameObject.transform.localScale.z);
+                    this.gameObject.transform.localScale = new Vector3(this.gameObject.transform.localScale.x * -1, this.gameObject.transform.localScale.y, this.gameObject.transform.localScale.z);                    
+                    if (initialSpeed<0)
+                    {
+                        DirLeftPS.Play();
+                    }
+                    else
+                    {
+                        DirRightPS.Play();
 
+                    }
                     break;
 
                 case 4://right

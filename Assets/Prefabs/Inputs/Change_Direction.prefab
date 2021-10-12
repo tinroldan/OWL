@@ -5308,7 +5308,7 @@ MonoBehaviour:
   maxDist: 0.3
   InputClip: {fileID: 8300000, guid: 8912f6803a37de5428990cb9433529da, type: 3}
   input: 3
-  Effect: {fileID: 0}
+  Effect: {fileID: 4325771099159278692, guid: f16a64c088956b54495c35025dc29446, type: 3}
   moveMe: {fileID: 0}
   dist: 0
   parent: {fileID: 9049559682341715193}
