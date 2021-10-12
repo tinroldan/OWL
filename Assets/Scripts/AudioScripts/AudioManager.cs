@@ -22,37 +22,37 @@ public class AudioManager : MonoBehaviour
     private void Update()
     {
         scene = SceneManager.GetActiveScene();
-        switch(scene.name)
+        switch(scene.buildIndex)
         {
-            case "1-1":
+            case 5:
                 BackgroundM.clip = World1;
                 if (BackgroundM.isPlaying == false)
                 {
                     BackgroundM.Play();
                 }
                 break;
-            case "2-1":
+            case 11:
                 BackgroundM.clip = World2;
                 if (BackgroundM.isPlaying == false)
                 {
                     BackgroundM.Play();
                 }
                 break;
-            case "3-1":
-                BackgroundM.clip = World3;
-                if (BackgroundM.isPlaying == false)
-                {
-                    BackgroundM.Play();
-                }
-                break;
-            case "4-1":
-                BackgroundM.clip = World4;
-                if (BackgroundM.isPlaying == false)
-                {
-                    BackgroundM.Play();
-                }
-                break;
-            case "TitleScreen":
+            //case "3-1":
+               // BackgroundM.clip = World3;
+                //if (BackgroundM.isPlaying == false)
+                //{
+                  //  BackgroundM.Play();
+                //}
+               // break;
+           // case "4-1":
+             //   BackgroundM.clip = World4;
+               // if (BackgroundM.isPlaying == false)
+                //{
+                 //   BackgroundM.Play();
+                //}
+               // break;
+            case 0:
                   BackgroundM.clip = Menu;
                 if (BackgroundM.isPlaying == false)
                 {
