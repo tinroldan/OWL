@@ -105,7 +105,7 @@ public class PlayerM : MonoBehaviour
 
                     rb2d = GetComponent<Rigidbody2D>();
 
-                    if(speed<=2)
+                    if(speed<=2&&speed>=-2)
                     {
                         rb2d.AddForce(new Vector2(0, jumpForce*2), ForceMode2D.Impulse);
 
@@ -189,6 +189,11 @@ public class PlayerM : MonoBehaviour
     private IEnumerator TimerSize()
     {
         yield return new WaitForSeconds(2f);
+
+        if(gameObject.transform.localScale.x<0)
+        {
+            initialScale.x = initialScale.x * -1;
+        }
 
         gameObject.transform.localScale = initialScale;
         SizeUpPS.Play();
