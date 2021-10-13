@@ -43,15 +43,15 @@ public class SimpleSceneChange : MonoBehaviour
 
     public void CloseApp()
     {
-        if (fadeImage != null)
-        {
-            StartCoroutine(FadeOUT("Quit"));
+        //if (fadeImage != null)
+        //{
+        //    StartCoroutine(FadeOUT("Quit"));
 
-        }
-        else
-        {
+        //}
+        //else
+        //{
             Application.Quit();
-        }
+        //}
     }
 
     public void ResetScene()
