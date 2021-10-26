@@ -33489,13 +33489,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2230529513456315158, guid: 8825e593944d1434598c5754406b6bd3,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2230529513456315158, guid: 8825e593944d1434598c5754406b6bd3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2230529513456315158, guid: 8825e593944d1434598c5754406b6bd3,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1245015229}
     - target: {fileID: 2230529513456315158, guid: 8825e593944d1434598c5754406b6bd3,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e69be3910f9cf5458e631e2974a4efd,
+        type: 2}
+    - target: {fileID: 2230529513456315158, guid: 8825e593944d1434598c5754406b6bd3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2230529513456315158, guid: 8825e593944d1434598c5754406b6bd3,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2230529513456315158, guid: 8825e593944d1434598c5754406b6bd3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: inputselectsound
+      objectReference: {fileID: 0}
+    - target: {fileID: 2230529513456315158, guid: 8825e593944d1434598c5754406b6bd3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ButtonsAudios, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2230529513456315158, guid: 8825e593944d1434598c5754406b6bd3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2230529513456315158, guid: 8825e593944d1434598c5754406b6bd3,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2230529513456315161, guid: 8825e593944d1434598c5754406b6bd3,
         type: 3}
@@ -56407,6 +56448,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 7e69be3910f9cf5458e631e2974a4efd, type: 2}
+        m_TargetAssemblyTypeName: ButtonsAudios, Assembly-CSharp
+        m_MethodName: inputselectsound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
