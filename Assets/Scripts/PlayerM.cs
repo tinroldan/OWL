@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class PlayerM : MonoBehaviour
 {
+    [SerializeField] AudioClip WinClip, LoseClip;
     [Header("Player Value")]
     public float speed, jumpForce;
-
+    
+    private AudioSource playerSource;
     public float initialSpeed;
 
     public bool go;
@@ -31,7 +33,7 @@ public class PlayerM : MonoBehaviour
     Vector3 initialScale;
     void Start()
     {
-
+        playerSource = GetComponent<AudioSource>();
         anim.SetBool("Walk", false);
         go = false;
         initialPos = transform.position;
@@ -78,6 +80,7 @@ public class PlayerM : MonoBehaviour
         {
 
             Ganar();
+            playerSource.PlayOneShot(WinClip);
         }
 
         if (col.CompareTag("fire"))
@@ -86,7 +89,7 @@ public class PlayerM : MonoBehaviour
             //go = false;
             //anim.SetBool("Walk", false);
             //SceneManager.LoadScene("Main");
-
+            playerSource.PlayOneShot(LoseClip);
 
         }
     }
