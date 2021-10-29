@@ -31,8 +31,16 @@ public class PlayerM : MonoBehaviour
 
     Vector3 initialPos;
     Vector3 initialScale;
+
+    [SerializeField]
+    int indexWorld;
+    [SerializeField]
+    bool finalLevel;
+
+    UserSate state;
     void Start()
     {
+        state = GameObject.FindGameObjectWithTag("userState").GetComponent<UserSate>();
         playerSource = GetComponent<AudioSource>();
         anim.SetBool("Walk", false);
         go = false;
@@ -72,6 +80,14 @@ public class PlayerM : MonoBehaviour
     {
         menuW.SetActive(true);
         Time.timeScale = 0;
+
+        if(finalLevel==true&&indexWorld> state.past_worlds)
+        {
+            state.past_worlds = indexWorld;
+            UserSateSave.Save(state);
+        }
+
+        
     }
 
     private void OnTriggerEnter2D(Collider2D col)

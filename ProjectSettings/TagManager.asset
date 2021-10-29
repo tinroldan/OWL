@@ -10,6 +10,7 @@ TagManager:
   - cliprec
   - Manager
   - Snap
+  - '"userState"'
   layers:
   - Default
   - TransparentFX

@@ -14901,6 +14901,16 @@ PrefabInstance:
       propertyPath: menuW
       value: 
       objectReference: {fileID: 1130641400}
+    - target: {fileID: 3502935561062148572, guid: 45a82e8994821e54e8a8db61ca20354f,
+        type: 3}
+      propertyPath: finalLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502935561062148572, guid: 45a82e8994821e54e8a8db61ca20354f,
+        type: 3}
+      propertyPath: indexWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3502935561062148574, guid: 45a82e8994821e54e8a8db61ca20354f,
         type: 3}
       propertyPath: m_RootOrder
