@@ -50101,7 +50101,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &1930787542
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50493,7 +50493,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: LVLS
+          m_StringArgument: LoreMoment
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1962858576
