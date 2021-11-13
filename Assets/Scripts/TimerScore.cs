@@ -19,7 +19,7 @@ public class TimerScore : MonoBehaviour
     }
     private void Update()
     {
-        Timing();
+        //Timing();
     }
 
     public void Timing()
