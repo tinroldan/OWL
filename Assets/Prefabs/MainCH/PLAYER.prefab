@@ -206,7 +206,7 @@ MonoBehaviour:
   LoseClip: {fileID: 8300000, guid: 6f6d560f6b6bfb34ca836e8424ef6286, type: 3}
   speed: 2.5
   jumpForce: 6
-  initialSpeed: 0
+  initialSpeed: 2.5
   go: 0
   anim: {fileID: 3502935561062148575}
   menuF: {fileID: 0}
@@ -216,6 +216,8 @@ MonoBehaviour:
   SizeUpPS: {fileID: 2428289176134484359}
   DirRightPS: {fileID: 6704369289724669207}
   DirLeftPS: {fileID: 851288056321967997}
+  indexWorld: 1
+  finalLevel: 1
   input: 0
 --- !u!50 &3502935561062148571
 Rigidbody2D:
