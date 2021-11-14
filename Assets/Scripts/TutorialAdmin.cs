@@ -3,35 +3,40 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class TutorialAdmin : MonoBehaviour
 {
     [SerializeField] UserSate state;
     [SerializeField] int tutorialIndex;
     Scene Scene;
-    [SerializeField] GameObject[] Tutoriales = new GameObject[8];
+    [SerializeField] GameObject Tutorial;
+    [SerializeField] GameObject uiComponents;
+
+           
+    //public UnityEvent eventTutorial;// 
+
 
     private void Start()
     {
+        //eventTutorial?.Invoke();
         OnTutorial(tutorialIndex);
     }
     private void Update()
     {
-        Scene = SceneManager.GetActiveScene();
+        //Scene = SceneManager.GetActiveScene();
         
-        switch (Scene.buildIndex)
-        {
-            case 5:
+        //switch (Scene.buildIndex)
+        //{
+        //    case 5:
                 
-                if (state.Tutorials[0] == false && state.Tutorials[1] == false)
-                {
-                    Tutoriales[0].SetActive(true);
-                }
-                break;
+        //        if (state.Tutorials[0] == false && state.Tutorials[1] == false)
+        //        {
+        //            Tutorial.SetActive(true);
+        //        }
+        //        break;
           
-
-
-        }
+        //}
     }
     public void SkipTuto(int index)
     {
@@ -47,11 +52,31 @@ public class TutorialAdmin : MonoBehaviour
         UserSateSave.Load(state);
         if (state.Tutorials[index])
         {
-            Tutoriales[index].SetActive(false);
+            if (Tutorial != null)
+            {
+                Tutorial.SetActive(false);
+
+            }
+            if (uiComponents != null)
+            {
+
+                uiComponents.SetActive(true);
+
+            }
         }
         else
         {
-            Tutoriales[index].SetActive(true);
+            if (Tutorial != null)
+            {
+                Tutorial.SetActive(true);
+
+            }
+            if (uiComponents!=null)
+            {
+                
+                    uiComponents.SetActive(false);
+                
+            }
         }
     }
 }

@@ -8,7 +8,8 @@ public class LevelsManager : MonoBehaviour
     UserSate state;
     [SerializeField]
     Button[] worldsButtons;
-
+    [SerializeField]
+    Image buttonRender;
     private void Start()
     {
         state = GameObject.FindGameObjectWithTag("userState").GetComponent<UserSate>();
@@ -22,7 +23,49 @@ public class LevelsManager : MonoBehaviour
         {
             worldsButtons[i].interactable = true;
         }
+
+        if(state.Tutorials[state.Tutorials.Length-1])
+        {
+            showtuto = false;
+            buttonRender.color = Color.red;
+        }
+        else
+        {
+            showtuto = true;
+            buttonRender.color = Color.green;
+        }
     }
+
+    bool showtuto;
+    public void ShowTutorial()
+    {
+        if(showtuto)
+        {
+            buttonRender.color = Color.red;
+            showtuto = false;
+            for (int i = 0; i < state.Tutorials.Length; i++)
+            {
+                state.Tutorials[i] = true;
+                //print("tutorial " + i + ": " + state.Tutorials[i]);
+
+            }
+        }
+        else
+        {
+            buttonRender.color = Color.green;
+            showtuto = true;
+            for (int i = 0; i < state.Tutorials.Length; i++)
+            {
+                state.Tutorials[i] = false;
+                //print("tutorial " + i + ": " + state.Tutorials[i]);
+
+            }
+        }
+
+        UserSateSave.Save(state);
+
+    }
+
 
 
 }
