@@ -12,6 +12,8 @@ public class LevelsManager : MonoBehaviour
     Image buttonRender;
     private void Start()
     {
+
+
         state = GameObject.FindGameObjectWithTag("userState").GetComponent<UserSate>();
 
         for (int i = 0; i < worldsButtons.Length; i++)
@@ -34,6 +36,15 @@ public class LevelsManager : MonoBehaviour
             showtuto = true;
             buttonRender.color = Color.green;
         }
+
+        for (int i = 0; i < state.Tutorials.Length; i++)
+        {
+            print("tutorial " + i + ": " + state.Tutorials[i]);
+
+        }
+        int aux = state.Tutorials.Length-1;
+        print("tutorial final: " + aux);
+
     }
 
     bool showtuto;
@@ -46,7 +57,7 @@ public class LevelsManager : MonoBehaviour
             for (int i = 0; i < state.Tutorials.Length; i++)
             {
                 state.Tutorials[i] = true;
-                //print("tutorial " + i + ": " + state.Tutorials[i]);
+                
 
             }
         }
@@ -60,6 +71,20 @@ public class LevelsManager : MonoBehaviour
                 //print("tutorial " + i + ": " + state.Tutorials[i]);
 
             }
+        }
+
+        UserSateSave.Save(state);
+
+    }
+
+    public void DeletData()
+    {
+        state.past_worlds = 0;
+        for (int i = 0; i < state.Tutorials.Length; i++)
+        {
+            state.Tutorials[i] = false;
+            //print("tutorial " + i + ": " + state.Tutorials[i]);
+
         }
 
         UserSateSave.Save(state);
