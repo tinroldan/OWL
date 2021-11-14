@@ -37,6 +37,8 @@ public class PlayerM : MonoBehaviour
     [SerializeField]
     bool finalLevel=false;
 
+    [SerializeField] GameObject shadow;
+
     UserSate state;
     void Start()
     {
@@ -90,6 +92,14 @@ public class PlayerM : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Ground"))
+        {
+
+            shadow.SetActive(true);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("cheese"))
@@ -123,7 +133,7 @@ public class PlayerM : MonoBehaviour
                 case 0://jump
 
                     rb2d = GetComponent<Rigidbody2D>();
-
+                    shadow.SetActive(false);
                     if(speed<=2&&speed>=-2)
                     {
                         rb2d.AddForce(new Vector2(0, jumpForce*2), ForceMode2D.Impulse);

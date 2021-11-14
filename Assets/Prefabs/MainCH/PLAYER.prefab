@@ -218,6 +218,7 @@ MonoBehaviour:
   DirLeftPS: {fileID: 851288056321967997}
   indexWorld: 1
   finalLevel: 1
+  shadow: {fileID: 3502935559793629985}
   input: 0
 --- !u!50 &3502935561062148571
 Rigidbody2D:
