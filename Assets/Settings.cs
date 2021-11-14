@@ -13,12 +13,14 @@ public class Settings : MonoBehaviour
     [SerializeField]
     GameObject settingsPanel;
     [SerializeField]
+    GameObject audioManager;
+    [SerializeField]
     TextMeshProUGUI textTutorial, textSound;
     void Start()
     {
         settingsPanel.SetActive(false);
         state = GameObject.FindGameObjectWithTag("userState").GetComponent<UserSate>();
-
+        UserSateSave.Load(state);
         if (state.Tutorials[numtutorials - 1])
         {
             showtuto = false;
@@ -34,6 +36,18 @@ public class Settings : MonoBehaviour
         for (int i = 0; i < state.Tutorials.Length; i++)
         {
             //print("tutorial " + i + ": " + state.Tutorials[i]);
+
+        }
+
+        if (state.music)
+        {
+            textSound.text = "Music: On";
+            audioManager.SetActive(true);
+        }
+        else
+        {
+            textSound.text = "Music: Off";
+            audioManager.SetActive(false);
 
         }
         //int aux = numtutorials - 1;
@@ -87,7 +101,20 @@ public class Settings : MonoBehaviour
 
     public void OnMusic()
     {
+        if(state.music)
+        {
+            textSound.text = "Music: Off";
+            state.music = false;
+            audioManager.SetActive(false);
+        }
+        else
+        {
+            textSound.text = "Music: On";
+            state.music = true;
+            audioManager.SetActive(true);
 
+        }
+        UserSateSave.Save(state);
     }
 
     public void OpenSettings()
