@@ -7,12 +7,17 @@ public class SingleState : MonoBehaviour
     GameObject current_state;
     [SerializeField]
     GameObject userState;
-    void Start()
+
+    private void Awake()
     {
         if (GameObject.FindGameObjectWithTag("userState") == null)
         {
             Instantiate(userState);
         }
+    }
+    void Start()
+    {
+        
     }
 
 }

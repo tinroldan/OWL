@@ -96,6 +96,7 @@ public class PlayerM : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Ground"))
         {
+            anim.SetBool("Jump", false);
 
             shadow.SetActive(true);
         }
@@ -134,7 +135,9 @@ public class PlayerM : MonoBehaviour
 
                     rb2d = GetComponent<Rigidbody2D>();
                     shadow.SetActive(false);
-                    if(speed<=2&&speed>=-2)
+                    anim.SetBool("Jump", true);
+
+                    if (speed<=2&&speed>=-2)
                     {
                         rb2d.AddForce(new Vector2(0, jumpForce*2), ForceMode2D.Impulse);
 

@@ -256,6 +256,9 @@ MonoBehaviour:
   worldsButtons:
   - {fileID: 1321681103}
   - {fileID: 562866317}
+  worldsButtonsText:
+  - {fileID: 281449355}
+  - {fileID: 990697993}
   buttonRender: {fileID: 1321168622}
 --- !u!1 &281449353
 GameObject:
@@ -1605,7 +1608,7 @@ GameObject:
   - component: {fileID: 1674360520}
   - component: {fileID: 1674360519}
   m_Layer: 5
-  m_Name: Lvl2 (1)
+  m_Name: Lvl3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
