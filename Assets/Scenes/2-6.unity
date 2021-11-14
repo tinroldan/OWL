@@ -13848,6 +13848,7 @@ GameObject:
   - component: {fileID: 814625093}
   - component: {fileID: 814625092}
   - component: {fileID: 814625098}
+  - component: {fileID: 814625099}
   m_Layer: 0
   m_Name: Drop
   m_TagString: DropEfector
@@ -13894,7 +13895,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 13.527645, y: 9.9576435}
+  m_Offset: {x: 13.527645, y: 9.547982}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -13905,7 +13906,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.058052, y: 12.0901985}
+  m_Size: {x: 19.058052, y: 12.909521}
   m_EdgeRadius: 0
 --- !u!61 &814625094
 BoxCollider2D:
@@ -14013,6 +14014,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 9.143454, y: 1.0243719}
+  m_EdgeRadius: 0
+--- !u!61 &814625099
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814625091}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -7.1715345, y: 10.24819}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 23.88025, y: 6.227054}
   m_EdgeRadius: 0
 --- !u!1001 &819044331
 PrefabInstance:
