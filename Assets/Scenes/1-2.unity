@@ -997,7 +997,7 @@ GameObject:
   - component: {fileID: 35742534}
   m_Layer: 0
   m_Name: First floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1010,8 +1010,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35742532}
   m_LocalRotation: {x: -0, y: -0, z: 0.7068634, w: -0.7073501}
-  m_LocalPosition: {x: -13.4832, y: -5.9098, z: 57.853626}
-  m_LocalScale: {x: 0.9031018, y: 0.7273, z: 1}
+  m_LocalPosition: {x: -13.0309, y: -5.9095, z: 57.853626}
+  m_LocalScale: {x: 0.9031018, y: 0.774429, z: 1}
   m_Children: []
   m_Father: {fileID: 1712254878}
   m_RootOrder: 0
@@ -31791,7 +31791,7 @@ GameObject:
   - component: {fileID: 1263607787}
   m_Layer: 0
   m_Name: Third floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57514,7 +57514,7 @@ GameObject:
   - component: {fileID: 2038543279}
   m_Layer: 0
   m_Name: Second floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
