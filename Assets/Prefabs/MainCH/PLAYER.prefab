@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3651818b2d872b44bcac1ed099dc25f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WinClip: {fileID: 8300000, guid: c2f0396134087bf4c9d1eb7b5a4d7b28, type: 3}
+  WinClip: {fileID: 8300000, guid: 3894b56978f7f3c4aaa37d68bcf4bd9f, type: 3}
   LoseClip: {fileID: 8300000, guid: 6f6d560f6b6bfb34ca836e8424ef6286, type: 3}
   speed: 2.5
   jumpForce: 6
