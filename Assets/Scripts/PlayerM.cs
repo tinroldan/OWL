@@ -35,7 +35,7 @@ public class PlayerM : MonoBehaviour
     [SerializeField]
     int indexWorld;
     [SerializeField]
-    bool finalLevel;
+    bool finalLevel=false;
 
     UserSate state;
     void Start()

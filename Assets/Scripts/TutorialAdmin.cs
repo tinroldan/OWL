@@ -7,11 +7,12 @@ using UnityEngine.Events;
 
 public class TutorialAdmin : MonoBehaviour
 {
-    [SerializeField] UserSate state;
+    UserSate state;
     [SerializeField] int tutorialIndex;
     Scene Scene;
     [SerializeField] GameObject Tutorial;
     [SerializeField] GameObject uiComponents;
+
 
            
     //public UnityEvent eventTutorial;// 
@@ -19,6 +20,8 @@ public class TutorialAdmin : MonoBehaviour
 
     private void Start()
     {
+        state = GameObject.FindGameObjectWithTag("userState").GetComponent<UserSate>();
+
         //eventTutorial?.Invoke();
         OnTutorial(tutorialIndex);
     }
@@ -41,11 +44,12 @@ public class TutorialAdmin : MonoBehaviour
     public void SkipTuto(int index)
     {
         state.Tutorials[index] = true;
-        UserSateSave.Save(state);
         for (int i = 0; i < state.Tutorials.Length; i++)
         {
             print("tutorial" + i + ": " + state.Tutorials[i]);
         }
+        UserSateSave.Save(state);
+
     }
     private void OnTutorial(int index)
     {

@@ -10,6 +10,9 @@ public class LevelsManager : MonoBehaviour
     Button[] worldsButtons;
     [SerializeField]
     Image buttonRender;
+
+    int numtutorials = 7;
+
     private void Start()
     {
 
@@ -26,7 +29,7 @@ public class LevelsManager : MonoBehaviour
             worldsButtons[i].interactable = true;
         }
 
-        if(state.Tutorials[state.Tutorials.Length-1])
+        if(state.Tutorials[numtutorials-1])
         {
             showtuto = false;
             buttonRender.color = Color.red;
@@ -42,8 +45,8 @@ public class LevelsManager : MonoBehaviour
             print("tutorial " + i + ": " + state.Tutorials[i]);
 
         }
-        int aux = state.Tutorials.Length-1;
-        print("tutorial final: " + aux);
+        int aux = numtutorials-1;
+        print("tutorial final " + aux +"= "+ state.Tutorials[numtutorials - 1]);
 
     }
 

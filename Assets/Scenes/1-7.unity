@@ -1301,6 +1301,11 @@ PrefabInstance:
       propertyPath: menuW
       value: 
       objectReference: {fileID: 1965682456}
+    - target: {fileID: 3502935561062148572, guid: 45a82e8994821e54e8a8db61ca20354f,
+        type: 3}
+      propertyPath: finalLevel
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3502935561062148573, guid: 45a82e8994821e54e8a8db61ca20354f,
         type: 3}
       propertyPath: m_Color.b
