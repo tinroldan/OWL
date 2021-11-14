@@ -12,6 +12,8 @@ TagManager:
   - Snap
   - '"userState"'
   - userState
+  - CantDrop
+  - DropEfector
   layers:
   - Default
   - TransparentFX

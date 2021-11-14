@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,24 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
+public enum InputItems
+{
+    jump,
+    speed,
+    slow,
+    mirror,
+    size,
+
+}
+
 public class DragItems : MonoBehaviour
 {
+    [SerializeField]
+    InputItems m_SelectInput;
+    [SerializeField]
+    GameObject[] available_inputs;
+    [SerializeField]
+    Sprite[] available_inputs_image;
     bool startDrag;
     bool canDrop;
     [SerializeField]
@@ -16,6 +33,11 @@ public class DragItems : MonoBehaviour
 
     void Start()
     {
+        int indexInput = Array.IndexOf(Enum.GetValues(m_SelectInput.GetType()), m_SelectInput);
+        instatiateObject = available_inputs[indexInput];
+        this.gameObject.GetComponent<Image>().sprite = available_inputs_image[indexInput];
+        print(indexInput);
+
         dropEfector = GameObject.FindGameObjectWithTag("DropEfector").GetComponent<CantDrop>();
 
         canDrop = false;
