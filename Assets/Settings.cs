@@ -15,7 +15,7 @@ public class Settings : MonoBehaviour
     [SerializeField]
     GameObject audioManager;
     [SerializeField]
-    TextMeshProUGUI textTutorial, textSound;
+    TextMeshProUGUI textTutorial, textSound,textScore;
     void Start()
     {
         settingsPanel.SetActive(false);
@@ -50,8 +50,19 @@ public class Settings : MonoBehaviour
             audioManager.SetActive(false);
 
         }
+        SetScore();
         //int aux = numtutorials - 1;
         //print("tutorial final " + aux + "= " + state.Tutorials[numtutorials - 1]);
+    }
+
+    private void SetScore()
+    {
+        int auxScore =0;
+        for (int i = 0; i < state.score.Length; i++)
+        {
+            auxScore += state.score[i];
+        }
+        textScore.text = "Score: " + auxScore.ToString();
     }
 
     public void ShowTutorial()
@@ -94,6 +105,16 @@ public class Settings : MonoBehaviour
             //print("tutorial " + i + ": " + state.Tutorials[i]);
 
         }
+        textTutorial.text = "Show Tutorial: Yes";
+        textSound.text = "Sound: On";
+        state.music = true;
+        audioManager.SetActive(true);
+
+        for (int i = 0; i < state.score.Length; i++)
+        {
+            state.score[i] = 0;
+        }
+        SetScore();
 
         UserSateSave.Save(state);
 
@@ -103,13 +124,13 @@ public class Settings : MonoBehaviour
     {
         if(state.music)
         {
-            textSound.text = "Music: Off";
+            textSound.text = "Sound: Off";
             state.music = false;
             audioManager.SetActive(false);
         }
         else
         {
-            textSound.text = "Music: On";
+            textSound.text = "Sound: On";
             state.music = true;
             audioManager.SetActive(true);
 

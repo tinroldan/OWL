@@ -15,6 +15,7 @@ TagManager:
   - CantDrop
   - DropEfector
   - Ground
+  - UiElements
   layers:
   - Default
   - TransparentFX

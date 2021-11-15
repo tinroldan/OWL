@@ -19,9 +19,7 @@ public class LevelsManager : MonoBehaviour
     {
         availableColor = Color.white;
         noAvailableColor = Color.white;
-        noAvailableColor.r = 100;
-        noAvailableColor.g = 100;
-        noAvailableColor.b = 100;
+        noAvailableColor.a = 0.5f;
 
         state = GameObject.FindGameObjectWithTag("userState").GetComponent<UserSate>();
 

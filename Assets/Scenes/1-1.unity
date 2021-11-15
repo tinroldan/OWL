@@ -19783,11 +19783,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2230529512224384985, guid: 8825e593944d1434598c5754406b6bd3,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2230529512628645953, guid: 8825e593944d1434598c5754406b6bd3,
         type: 3}
       propertyPath: m_IsActive
@@ -19812,11 +19807,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -109.05475
-      objectReference: {fileID: 0}
-    - target: {fileID: 2230529512845729012, guid: 8825e593944d1434598c5754406b6bd3,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2230529512845729013, guid: 8825e593944d1434598c5754406b6bd3,
         type: 3}
@@ -20035,11 +20025,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas-----------------------------------
       objectReference: {fileID: 0}
-    - target: {fileID: 2230529513404850520, guid: 8825e593944d1434598c5754406b6bd3,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2230529513404850521, guid: 8825e593944d1434598c5754406b6bd3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -20243,6 +20228,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3729343609810647833, guid: 8825e593944d1434598c5754406b6bd3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4404024475881807470, guid: 8825e593944d1434598c5754406b6bd3,
         type: 3}
       propertyPath: m_RootOrder
@@ -20322,11 +20312,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4532733953820921558, guid: 8825e593944d1434598c5754406b6bd3,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5872515728238685622, guid: 8825e593944d1434598c5754406b6bd3,
         type: 3}
@@ -20419,11 +20404,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 6877040801929336552, guid: 8825e593944d1434598c5754406b6bd3,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 8035867069938934423, guid: 8825e593944d1434598c5754406b6bd3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -20470,7 +20450,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3527901750292790625, guid: 8825e593944d1434598c5754406b6bd3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8825e593944d1434598c5754406b6bd3, type: 3}
 --- !u!224 &689747528 stripped
 RectTransform:

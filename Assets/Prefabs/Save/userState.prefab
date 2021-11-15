@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   past_worlds: 0
+  Tutorials: 00000000000000
+  music: 1
 --- !u!114 &7303145678967553478
 MonoBehaviour:
   m_ObjectHideFlags: 0

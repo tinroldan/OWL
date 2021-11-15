@@ -7,6 +7,7 @@ public class UserSate : MonoBehaviour
     
     public int past_worlds;
     public bool[] Tutorials = new bool[7];
-    public bool music;
+    public bool music=true;
+    public int[] score = new int[14];
    
 }

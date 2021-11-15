@@ -40,9 +40,12 @@ public class PlayerM : MonoBehaviour
     [SerializeField] GameObject shadow;
 
     UserSate state;
+
+    TimerScore score;
     void Start()
     {
         state = GameObject.FindGameObjectWithTag("userState").GetComponent<UserSate>();
+        score = GameObject.FindGameObjectWithTag("UiElements").GetComponent<TimerScore>();
         playerSource = GetComponent<AudioSource>();
         anim.SetBool("Walk", false);
         go = false;
@@ -80,6 +83,8 @@ public class PlayerM : MonoBehaviour
     }
     public void Ganar()//esto es otro machetazzo xD
     {
+        score.levelEnd = true;
+
         menuW.SetActive(true);
         Time.timeScale = 0;
 
@@ -88,6 +93,8 @@ public class PlayerM : MonoBehaviour
             state.past_worlds = indexWorld;
             UserSateSave.Save(state);
         }
+
+        score.SetScore();
 
         
     }
