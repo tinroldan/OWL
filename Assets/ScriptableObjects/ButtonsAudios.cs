@@ -9,23 +9,36 @@ public class ButtonsAudios : ScriptableObject
     AudioSource ButtonSource;
    private void Awake()
     {
-        ButtonSource = GameObject.FindGameObjectWithTag("cliprec").GetComponent<AudioSource>();
+        try
+        {
+            ButtonSource = GameObject.FindGameObjectWithTag("cliprec").GetComponent<AudioSource>();
+
+        }
+        catch
+        {
+            ButtonSource = null;
+        }
     }
 
     public void GoButton()
     {
-        ButtonSource.PlayOneShot(ButtonGo);
+        if (ButtonSource != null)
+            ButtonSource.PlayOneShot(ButtonGo);
     }
     public void genericButton1()
     {
-        ButtonSource.PlayOneShot(GenericButton);
+        if (ButtonSource != null)
+            ButtonSource.PlayOneShot(GenericButton);
     }
     public void genericButton2()
     {
-        ButtonSource.PlayOneShot(GenericButton2);
+
+        if (ButtonSource != null)
+            ButtonSource.PlayOneShot(GenericButton2);
     }
     public void inputselectsound()
     {
-        ButtonSource.PlayOneShot(InputSelect);
+        if (ButtonSource != null)
+            ButtonSource.PlayOneShot(InputSelect);
     }
 }

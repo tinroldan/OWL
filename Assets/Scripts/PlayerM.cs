@@ -107,7 +107,9 @@ public class PlayerM : MonoBehaviour
         {
 
             Ganar();
-            playerSource.PlayOneShot(WinClip);
+
+            if (state.music)
+                playerSource.PlayOneShot(WinClip);
         }
 
         if (col.CompareTag("fire"))
@@ -116,7 +118,9 @@ public class PlayerM : MonoBehaviour
             //go = false;
             //anim.SetBool("Walk", false);
             //SceneManager.LoadScene("Main");
-            playerSource.PlayOneShot(LoseClip);
+
+            if (state.music)
+                playerSource.PlayOneShot(LoseClip);
 
         }
     }

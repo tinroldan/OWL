@@ -25,7 +25,6 @@ public class DragItems : MonoBehaviour
     [SerializeField]
     Sprite[] available_inputs_image;
     bool startDrag;
-    bool canDrop;
     [SerializeField]
     GameObject instatiateObject,startPos;
 
@@ -39,8 +38,6 @@ public class DragItems : MonoBehaviour
         print(indexInput);
 
         dropEfector = GameObject.FindGameObjectWithTag("DropEfector").GetComponent<CantDrop>();
-
-        canDrop = false;
     }
 
     void Update()

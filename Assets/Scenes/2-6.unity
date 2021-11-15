@@ -12557,12 +12557,12 @@ PrefabInstance:
     - target: {fileID: 3397481462513395440, guid: 8825e593944d1434598c5754406b6bd3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: 1-4
+      value: LVLS
       objectReference: {fileID: 0}
     - target: {fileID: 3397481462513395442, guid: 8825e593944d1434598c5754406b6bd3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3397481462570333417, guid: 8825e593944d1434598c5754406b6bd3,
         type: 3}

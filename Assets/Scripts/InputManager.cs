@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
 {
+    UserSate state;
 
     Transform player;
     [SerializeField]
@@ -35,13 +36,24 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
+        state = GameObject.FindGameObjectWithTag("userState").GetComponent<UserSate>();
+
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        clipSource = GameObject.FindGameObjectWithTag("cliprec").GetComponent<AudioSource>();
+        if(state.music)
+        {
+            clipSource = GameObject.FindGameObjectWithTag("cliprec").GetComponent<AudioSource>();
+
+        }
+        else
+        {
+            clipSource = null;
+        }
         moveMe = GameObject.FindGameObjectWithTag("Manager").GetComponent<MoveInputs>();
 
     }
     void Start()
     {
+
         actived = false;
 
         if (moveMe != null)
@@ -71,7 +83,10 @@ public class InputManager : MonoBehaviour
             player.gameObject.GetComponent<PlayerM>().OnInput(input);
             eventInput?.Invoke();
             actived = true;
-            clipSource.PlayOneShot(InputClip);
+
+            if (clipSource != null)
+                clipSource.PlayOneShot(InputClip);
+
             if (Effect != null)
             {
                 Effect.Play();

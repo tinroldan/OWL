@@ -11,7 +11,7 @@ public class Settings : MonoBehaviour
 
     UserSate state;
     [SerializeField]
-    GameObject settingsPanel;
+    GameObject settingsPanel,uiComponents;
     [SerializeField]
     GameObject audioManager;
     [SerializeField]
@@ -122,10 +122,12 @@ public class Settings : MonoBehaviour
         if(settingsPanel.activeSelf)
         {
             settingsPanel.SetActive(false);
+            uiComponents.SetActive(true);
         }
         else
         {
             settingsPanel.SetActive(true);
+            uiComponents.SetActive(false);
 
         }
     }
