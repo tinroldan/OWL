@@ -12,12 +12,12 @@ public class Settings : MonoBehaviour
     UserSate state;
     [SerializeField]
     GameObject settingsPanel,uiComponents;
-    [SerializeField]
     GameObject audioManager;
     [SerializeField]
     TextMeshProUGUI textTutorial, textSound,textScore;
     void Start()
     {
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManagerSingle>().childObject;
         settingsPanel.SetActive(false);
         state = GameObject.FindGameObjectWithTag("userState").GetComponent<UserSate>();
         UserSateSave.Load(state);

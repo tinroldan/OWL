@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class SingleState : MonoBehaviour
 {
-    GameObject current_state;
     [SerializeField]
-    GameObject userState;
+    GameObject userState, audioManager;
 
     private void Awake()
     {
         if (GameObject.FindGameObjectWithTag("userState") == null)
         {
             Instantiate(userState);
+        }
+
+        if (GameObject.FindGameObjectWithTag("AudioManager") == null)
+        {
+            Instantiate(audioManager);
         }
     }
     void Start()

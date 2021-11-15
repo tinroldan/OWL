@@ -6,17 +6,19 @@ using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] AudioSource BackgroundM;
-    AudioSource ButtonSource;
+    //AudioSource ButtonSource;
     Scene scene;
-    private bool AlreadyExist = false;
+    //private bool AlreadyExist = false;
     [SerializeField] AudioClip World1, World2, World3, World4, Menu;
+
+    
     void Start()
     {
-        if (GameObject.FindGameObjectsWithTag("Manager").Length < 2 && AlreadyExist == false)
-        {
-            DontDestroyOnLoad(gameObject);
-            AlreadyExist = true;
-        }
+        //if (GameObject.FindGameObjectsWithTag("Manager").Length < 2 && AlreadyExist == false)
+        //{
+        //    DontDestroyOnLoad(gameObject);
+        //    AlreadyExist = true;
+        //}
     }
    
     private void Update()

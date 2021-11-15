@@ -16,6 +16,7 @@ TagManager:
   - DropEfector
   - Ground
   - UiElements
+  - AudioManager
   layers:
   - Default
   - TransparentFX
